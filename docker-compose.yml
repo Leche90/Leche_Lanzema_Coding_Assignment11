@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  vite-app:
+    container_name: leche_lanzema_coding_assignment11
+    build:
+      context: . # file location
+      dockerfile: Dockerfile    
+    ports:
+      - '7775:7775'
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - .:/app
